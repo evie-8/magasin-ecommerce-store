@@ -10,10 +10,11 @@ const config: Config = {
     colors: {
       black: '#000',
       grey : '#555',
-     'light-grey': "#E9E9E9",
+     'light-grey': "#F3F3F3",
      orange: '#ffa45c',
      white:  '#FFF',
      'black-2': "#222",
+     transparent: 'transparent',
      
 
     },

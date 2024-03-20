@@ -5,17 +5,20 @@ import getBillboards from "@/actions/get-billboards";
 import Services from '@/components/services';
 import getProducts from '@/actions/get-products';
 import ProductLists from '@/components/ui/product-lists';
+import { Header } from '@/components/header';
 export const revalidate = 0;
 
 const HomePage = async () => {
   const billboards = await getBillboards();
   const products = await getProducts({isFeatured: true})
+  const newProducts = products.slice(0, 4);
+  const lastFourItems = products.slice(-4);
  
   return (
    <Container>
     <div className='space-y-10 pb-10'>
       <>
-      <HomePageCarousel billboards={billboards}/>
+      <Header/>
       </>
      
     <>
@@ -27,7 +30,11 @@ const HomePage = async () => {
       <Services/>
     </>
       <div className='flex flex-col gap-y-8 px-4 lg:px-8'>
-        <ProductLists title='Featured Products' data={products}/>
+        <ProductLists title='Featured Products' data={lastFourItems}/>
+      </div>
+
+      <div className='flex flex-col gap-y-8 px-4 lg:px-8'>
+        <ProductLists title='Our Latest Products' data={newProducts}/>
       </div>
    
     </div>

@@ -19,9 +19,11 @@ export interface Product {
     isFeatured: boolean;
     size: Size;
     color: Color;
+    quantity?: number 
     stock: number
     images: Image[];  
 }
+
 
 export interface Image {
     id: string;
@@ -39,3 +41,8 @@ export interface Color {
     name: string;
     value: string;
 }
+
+export interface CartOrder extends Product {
+    orderQuantity: number;
+} 
+
