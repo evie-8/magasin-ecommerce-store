@@ -16,11 +16,10 @@ interface ProductProps {
     pagination?: boolean;
 }
 const ProductLists: React.FC<ProductProps> = ({data, title, slider=false, pagination}) => {
-  
+  const [currentPage, setCurrentPage] = useState(1);
 
   if (pagination) {
 
-    const [currentPage, setCurrentPage] = useState(1);
     const productsPerPage = 9;
     const lastIndex = currentPage * productsPerPage;
     const firstIndex = lastIndex - productsPerPage;

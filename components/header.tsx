@@ -52,8 +52,8 @@ export const Header = () => {
   };
     return (
      <Slider {...settings}>
-          {arrays.map((item) => (
-            <Header1 title={item.title} url={item.url} slogan1={item.slogan1} slogan2={item.slogan2} bg={item.bg}/>
+          {arrays.map((item, i) => (
+            <Header1 key={i} title={item.title} url={item.url} slogan1={item.slogan1} slogan2={item.slogan2} bg={item.bg}/>
           ))}
    
      </Slider>
