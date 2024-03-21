@@ -36,7 +36,12 @@ const ProductLists: React.FC<ProductProps> = ({data, title, slider=false, pagina
   }
   
   const changePage = (id: number) => {
+    
       setCurrentPage(id);
+      const productDiv = document.getElementById('pageContainer');
+      if (productDiv) {
+        productDiv.scrollIntoView({ behavior: 'smooth' });
+      }
   }
   
   const nextPage = () => {
@@ -47,7 +52,7 @@ const ProductLists: React.FC<ProductProps> = ({data, title, slider=false, pagina
 
  
     return (
-    <div className='mt-6 lg:col-span-4 lg:mt-0'>
+    <div id='pageContainer' className='mt-6 lg:col-span-4 lg:mt-0'>
        <h3 className=' relative font-extrabold mb-12 text-3xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[80px]'>{title}</h3>
         {!items.length  ? <NoResults message='No products found'/>
           : (
@@ -95,6 +100,8 @@ if (slider) {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
+          nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
          
         }
       },
@@ -103,6 +110,8 @@ if (slider) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
+          nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
 
         }
       },
@@ -111,6 +120,8 @@ if (slider) {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
+          nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
 
         }
       },
@@ -118,7 +129,9 @@ if (slider) {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
         }
       }
     ]
