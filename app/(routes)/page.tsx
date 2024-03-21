@@ -33,7 +33,7 @@ const HomePage = async () => {
       </div>
 
       <div className='flex flex-col gap-y-8 px-4 lg:px-8'>
-        <ProductLists title='Our Latest Products' slider={true} data={newProducts} />
+        <ProductLists title='Latest Products' slider={true} data={newProducts} />
       </div>
    
     </div>

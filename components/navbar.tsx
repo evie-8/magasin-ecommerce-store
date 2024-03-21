@@ -14,7 +14,7 @@ const NavBar =  async() => {
     <div className='bg-white sticky top-0 left-0  z-40'>
       <div className='border-b border-light-grey'>
         <Container>
-            <div className='px-4 sm:px-6  lg:px-8 flex h-16 items-center'>
+            <div className='px-4 flex h-16 items-center'>
             <Link href='/' className='ml-4 flex lg:ml-0 gap-x-2' >
             <p className='font-bold md:text-2xl  text-xl text-black'>magasin</p>
             </Link>

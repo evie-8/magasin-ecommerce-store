@@ -32,7 +32,7 @@ const arrays = [
     title: 'Discover Trends',
     url: "images/woman3.png",
     slogan1: 'Elegant Style',
-    slogan2: "Women's fashion, redefined",
+    slogan2: "Fashion, redefined",
     bg: "images/bg4.jpg"
   }
 ]
