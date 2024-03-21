@@ -43,7 +43,7 @@ const CartItem: React.FC<CartItemProps> = ({item}) => {
                                 <span className='text-black flex items-center justify-center border border-orange h-10 w-10 '>
                                     {item.orderQuantity}
                                 </span>
-                                <div className="flex gap-x-6 items-center text-white justify-center border border-transparent bg-orange h-10 w-10 p-4 4 hover:border-orange hover:text-orange hover:bg-transparent">
+                                <div className="flex gap-x-6 items-center text-white justify-center border border-transparent bg-orange h-10 w-10 p-4  hover:border-orange hover:text-orange hover:bg-transparent">
                                         
                                     <button onClick={() => cart.increaseQuantity(item.id)}>
                                     <Plus size={20}/>

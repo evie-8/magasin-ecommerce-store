@@ -11,8 +11,8 @@ export const revalidate = 0;
 const HomePage = async () => {
   const billboards = await getBillboards();
   const products = await getProducts({isFeatured: true})
-  const newProducts = products.slice(0, 4);
-  const lastFourItems = products.slice(-4);
+  const newProducts = products.slice(0, 8);
+  const lastFourItems = products.slice(-8);
  
   return (
    <Container>
@@ -30,11 +30,11 @@ const HomePage = async () => {
       <Services/>
     </>
       <div className='flex flex-col gap-y-8 px-4 lg:px-8'>
-        <ProductLists title='Featured Products' data={lastFourItems}/>
+        <ProductLists title='Featured Products' slider={true} data={lastFourItems} />
       </div>
 
       <div className='flex flex-col gap-y-8 px-4 lg:px-8'>
-        <ProductLists title='Our Latest Products' data={newProducts}/>
+        <ProductLists title='Our Latest Products' slider={true} data={newProducts} />
       </div>
    
     </div>

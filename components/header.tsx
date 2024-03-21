@@ -10,26 +10,30 @@ const arrays = [
     title: "Shop Now",
     url: "images/slide1.png",
     slogan1: "All Your Needs",
-    slogan2: "In one Place!"
+    slogan2: "In one Place!",
+    bg: 'images/bg1.jpg'
   },
   {
     title: "Explore Now",
     url: "images/woman2.png",
     slogan1: "Chic Choices",
-    slogan2: "Endless Possibilities."
+    slogan2: "Endless Possibilities.",
+    bg: "images/bg2.jpg"
     
   },
   {
     title: "Discover Now",
     url: "images/woman1.png",
     slogan1: "Shop the Latest",
-    slogan2: "Be the Greatest"
+    slogan2: "Be the Greatest",
+    bg: "images/bg3.jpg"
     
   }, {
     title: 'Discover Trends',
     url: "images/woman3.png",
     slogan1: 'Elegant Style',
-    slogan2: "Women's fashion, redefined"
+    slogan2: "Women's fashion, redefined",
+    bg: "images/bg4.jpg"
   }
 ]
 
@@ -49,7 +53,7 @@ export const Header = () => {
     return (
      <Slider {...settings}>
           {arrays.map((item) => (
-            <Header1 title={item.title} url={item.url} slogan1={item.slogan1} slogan2={item.slogan2}/>
+            <Header1 title={item.title} url={item.url} slogan1={item.slogan1} slogan2={item.slogan2} bg={item.bg}/>
           ))}
    
      </Slider>

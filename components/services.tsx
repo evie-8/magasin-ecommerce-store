@@ -39,7 +39,7 @@ const Services = () => {
     <div className='flex items-center md:justify-center md:px-10 p-5 justify-between flex-wrap'>
         {
             array.map((data) => (
-                <div key={data.name} className='text-center md:w-44 w-[150px] px-6 py-4 shadow-sm border border-light-grey rounded-md md:m-4 m-0 mb-2 ml-2 hover:shadow-xl'>
+                <div key={data.name} className='text-center md:w-44 w-[150px] px-6 py-4 shadow-xl border border-light-grey rounded-md md:m-4 m-0 mb-2 ml-2 hover:shadow-2xl'>
                     <Image src={`/${data.url}`} width={150} height={150} className='w-full mb-2 aspect-square' alt='services'/>
                     <h6 style={{ backgroundColor: data.color }} className='inline-block pt-[9px] pl-2 pr-[6px] pb-2 leading-none rounded-md text-black font-semibold'>{data.name}</h6>
  

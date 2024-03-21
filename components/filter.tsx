@@ -1,6 +1,6 @@
 "use client";
 
-import { Color, Size } from "@/types";
+import { Category, Color, Size } from "@/types";
 import { useSearchParams } from "next/navigation";
 import queryString from "query-string";
 import React from "react";
@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { useRouter } from "next-nprogress-bar";
 
 interface FilterProps {
-    data: (Size | Color)[];
+    data: (Size | Color | Category)[];
     name: string;
     valueKey: string;
 }

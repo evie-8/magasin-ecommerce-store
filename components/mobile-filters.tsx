@@ -1,5 +1,5 @@
 "use client";
-import { Color, Size } from "@/types";
+import { Category, Color, Size } from "@/types";
 import { useState } from "react";
 import Button from "@/components/ui/newButton";
 import { X, Filter as FilterIcon } from "lucide-react";
@@ -10,11 +10,13 @@ import Filter from "@/components/filter";
 interface MobileFilterProps {
     sizes: Size[],
     colors: Color[];
+    categories?: Category[]
 }
 
 const MobileFilter: React.FC<MobileFilterProps> = ({
     sizes,
-    colors
+    colors,
+    categories
 }) => {
     const [ open, setOpen] = useState(false);
     const onOpen = () => setOpen(true);
@@ -35,6 +37,16 @@ const MobileFilter: React.FC<MobileFilterProps> = ({
                         <IconButton icon={<X size={15} onClick={onClose}/>}/>
                     </div>
                     <div className="p-4">
+
+                        {categories && 
+                        (
+                             <Filter 
+                             valueKey="categoryId"
+                             name="Categories"
+                             data={categories}
+                         />
+                        )
+                        }
                     <Filter 
                     valueKey="sizeId"
                     name="Sizes"

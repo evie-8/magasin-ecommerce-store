@@ -8,6 +8,8 @@ import Filter  from "@/components/filter";
 import NoResults from "@/components/ui/no-results";
 import ProductCard from "@/components/ui/product-card";
 import MobileFilter from "@/components/mobile-filters";
+import ProductLists from "@/components/ui/product-lists";
+import { FilterIcon } from "lucide-react";
 
 export const revalidate = 0;
 
@@ -36,18 +38,15 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({params, searchParams})
                     <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
                        <MobileFilter sizes={sizes} colors={colors }/>
                         <div className="hidden lg:block">
+                            <div className="flex items-start justify-start gap-4 text-lg font-semibold mb-5 mt-7">
+                                <FilterIcon size={20} className="text-orange"/>
+                                <span className="">Filters</span>
+                            </div>
                             <Filter name="Sizes" valueKey="sizeId" data={sizes}/>
                             <Filter name="Colors" valueKey="colorId" data={colors}/>
                       
                         </div>
-                        <div className="mt-6 lg:col-span-4 lg:mt-0">
-                            {products.length === 0 && <NoResults message="No Products found"/>}
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                                            {products.map((product)=> (
-                                                <ProductCard key={product.id} data={product}/>
-                                            ) )}
-                                    </div>
-                        </div>
+                        <ProductLists data={products} title={category.name} pagination={true}/>
                     </div>
                 </div>
         </Container>
