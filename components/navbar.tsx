@@ -11,7 +11,7 @@ export const revalidate = 0;
 const NavBar =  async() => {
   const categories = await getCategories()
   return (
-    <div className='bg-white sticky top-0 left-0  z-40'>
+    <div className='bg-white sticky top-0 left-0  z-40 shadow-md'>
       <div className='border-b border-light-grey'>
         <Container>
             <div className='px-4 flex h-16 items-center'>
