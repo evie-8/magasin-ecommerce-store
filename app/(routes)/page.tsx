@@ -1,7 +1,5 @@
 import Container from '@/components/ui/container'
-import { HomePageCarousel } from '@/components/ui/homepage-carousel';
 import React from 'react'
-import getBillboards from "@/actions/get-billboards";
 import Services from '@/components/services';
 import getProducts from '@/actions/get-products';
 import ProductLists from '@/components/ui/product-lists';
@@ -9,7 +7,7 @@ import { Header } from '@/components/header';
 export const revalidate = 0;
 
 const HomePage = async () => {
-  const billboards = await getBillboards();
+ 
   const products = await getProducts({isFeatured: true})
   const newProducts = products.slice(0, 8);
   const lastFourItems = products.slice(-8);
@@ -23,7 +21,7 @@ const HomePage = async () => {
      
     <>
     <h3 
-       className='relative font-extrabold mb-12 text-3xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[60px]'
+       className='relative font-extrabold mb-12  lg:text-3xl md:text-3xl text-3xl sm:text-2xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[60px]'
       >What We Offer
     </h3>
         
