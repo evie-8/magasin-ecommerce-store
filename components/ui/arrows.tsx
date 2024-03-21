@@ -10,7 +10,7 @@ interface SampleArrowProps {
 
 const arrowStyles: CSSProperties = {
   display: "block",
-  fontSize: "24px", // Adjust the font size as needed
+  fontSize: "20px", // Adjust the font size as needed
   color: "#ffa45c", // Set your desired arrow color
   cursor: "pointer",
   background: "transparent",
@@ -22,7 +22,7 @@ const SampleNextArrow: React.FC<SampleArrowProps> = (props) => {
   return (
     <div
       className={className}
-      style={{ ...style, ...arrowStyles, marginLeft: "10px" }}
+      style={{ ...style, ...arrowStyles, marginLeft: "5px" }}
       onClick={onClick}
     >
       <FaChevronRight />
