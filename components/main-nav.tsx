@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { Category } from '@/types';
+import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 
@@ -20,17 +21,18 @@ const MainNav: React.FC<MainNavProps> = ({data}) => {
     }))
 
   return (
-    <nav className='mx-6 flex justify center items-center space-x-4 lg:space-x-6'>
-      
-      {
+    <nav className='relative mx-6 flex justify center items-center space-x-4 lg:space-x-6'>
+     {
         routes.map((route) => (
             <Link key={route.href} 
               href={route.href} 
-              className={cn('transition-colors hover:text-orange', route.active ? 'text-orange': 'text-[#555]')}>
+              className={cn('transition-colors hover:text-orange', route.active ? 'text-orange': 'text-grey]')}>
                 {route.label}
             </Link>
         ))
       }
+      
+     
     </nav>
   )
 }

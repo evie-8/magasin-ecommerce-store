@@ -4,24 +4,14 @@
 @tailwind utilities;
 
 
-html, body , :root {
-  height: 100%;
-}
-
-html, body{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 @layer components {
   
 
   html {
-    @apply overflow-x-hidden
+    @apply overflow-x-hidden scroll-smooth
   }
   body {
-    @apply font-spartan overflow-x-hidden
+    @apply font-spartan overflow-x-hidden scroll-smooth
   }
 
   .active {
@@ -31,12 +21,9 @@ html, body{
 .slide-item {
   @apply mx-2 my-0 md:basis-[45%] lg:basis-[23%] sm:basis-[80%] p-4
 }
+
  }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+ .slick-prev::before, .slick-next::before {
+  content: '' !important
 }
-
-
