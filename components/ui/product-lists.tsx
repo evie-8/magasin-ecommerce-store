@@ -48,7 +48,7 @@ const ProductLists: React.FC<ProductProps> = ({data, title, slider=false, pagina
  
     return (
     <div className='mt-6 lg:col-span-4 lg:mt-0'>
-       <h3 className=' relative font-extrabold mb-12 lg:text-3xl md:text-3xl sm:text-2xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[80px]'>{title}</h3>
+       <h3 className=' relative font-extrabold mb-12 text-3xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[80px]'>{title}</h3>
         {!items.length  ? <NoResults message='No products found'/>
           : (
             <>
@@ -126,7 +126,7 @@ if (slider) {
 
   return (
     <div className='space-y-4 '>
-    <h3 className=' relative font-extrabold mb-12 lg:text-3xl md:text-3xl sm:text-2xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[80px]'>{title}</h3>
+    <h3 className=' relative font-extrabold mb-12 text-3xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[80px]'>{title}</h3>
      {data.length === 0 && <NoResults message='No products found'/>}
       <Slider {...settings} className='flex items-center justify-center gap-6' >
     
@@ -151,7 +151,7 @@ if (slider) {
 
     return (
     <div className='space-y-4 '>
-       <h3 className=' relative font-extrabold mb-12 lg:text-3xl md:text-3xl sm:text-2xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[80px]'>{title}</h3>
+       <h3 className=' relative font-extrabold mb-12 text-3xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[60px]'>{title}</h3>
         {data.length === 0 && <NoResults message='No products found'/>}
 
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>

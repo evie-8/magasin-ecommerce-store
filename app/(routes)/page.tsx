@@ -1,4 +1,5 @@
 import Container from '@/components/ui/container'
+
 import React from 'react'
 import Services from '@/components/services';
 import getProducts from '@/actions/get-products';
@@ -21,7 +22,7 @@ const HomePage = async () => {
      
     <>
     <h3 
-       className='relative font-extrabold mb-12  lg:text-3xl md:text-3xl text-3xl sm:text-2xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[80px]'
+       className='relative font-extrabold mb-12 text-3xl text-center after:bg-orange after:w-[100px] after:h-2 after:rounded-md after:absolute after:-bottom-0 after:left-[50%] after:translate-x-[-50%] leading-[80px]'
       >What We Offer
     </h3>
         
