@@ -13,7 +13,8 @@ export const revalidate = 0;
 const NavBar =  async() => {
   const categories = await getCategories()
   return (
-            <div className='relative  shadow-lg w-full'>
+    <div className='relative'>
+       <div className='sticky top-0 left-0 w-full border border-light-grey shadow-sm z-40'>
               <div className='navbar'>
               <Link href='/' className='nav-logo' >
                 <p>SHOP</p>          
@@ -26,6 +27,8 @@ const NavBar =  async() => {
             </div>
   
             </div>
+    </div>
+           
             
   )
 }

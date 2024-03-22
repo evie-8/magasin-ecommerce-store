@@ -20,7 +20,7 @@
   } 
 
 .navbar {
-  @apply flex justify-around p-4 sticky top-0 left-0 z-40
+  @apply flex justify-around p-4 
 }
 
 .nav-logo {
