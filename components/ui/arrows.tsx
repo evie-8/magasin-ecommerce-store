@@ -10,12 +10,12 @@ interface SampleArrowProps {
 
 const arrowStyles: CSSProperties = {
   display: "block",
-  fontSize: "20px", // Adjust the font size as needed
-  color: "#ffa45c", // Set your desired arrow color
+ fontSize: '18px',
+ color: "#ffa45c", // Set your desired arrow color
   cursor: "pointer",
   background: "transparent",
   border: "none",
-  padding: '20px',
+  padding: '30px',
   margin: '0px'
 };
 

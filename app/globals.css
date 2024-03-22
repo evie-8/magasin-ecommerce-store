@@ -54,6 +54,10 @@
   @apply mx-2 my-0 md:basis-[45%] lg:basis-[23%] sm:basis-[80%] p-4
 }
 
+.slick-prev::after, .slick-next::after {
+  @apply max-md:text-sm text-xl !important
+}
+
  }
 
  .slick-prev::before, .slick-next::before {
