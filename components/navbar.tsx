@@ -17,7 +17,7 @@ const NavBar =  async() => {
               <div className='navbar'>
               <Link href='/' className='nav-logo' >
                 <p>SHOP</p>          
-                <FaShoppingBasket/>    
+                <FaShoppingBasket className='text-orange'/>    
               </Link>
              
               <MainNav data={categories} />

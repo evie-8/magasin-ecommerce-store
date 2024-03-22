@@ -28,7 +28,7 @@
 }
 
 .nav-logo p {
-  @apply text-black1 text-xl font-semibold
+  @apply text-orange text-xl max-md:text-sm font-semibold
 }
 
  .nav-menu {
