@@ -79,8 +79,8 @@ const Info: React.FC<InfoProps> = ({data}) => {
         <hr  className='my-4 text-light-grey'/>
 
         <p className='flex gap-2 text-grey mb-4'>
-            <span className='font-bold flex gap-2'><Check  className='text-[#00FF00]'/> <span className='text-black font-bold'>{data.stock}</span></span>
-            items in stock and ready to ship
+            <span className='font-bold flex gap-2'>✅ <span className='text-black font-bold'>{data.stock}</span></span>
+            items in stock and available 
         </p>
        <div className='flex  gap-8'>
        <div className='flex  flex-col gap-x-4 mb-4'>

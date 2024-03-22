@@ -5,9 +5,11 @@ import { Tab } from '@headlessui/react'
 import GalleryTab from '@/components/gallery/gallery-tab'
 import Image from 'next/image'
 interface GalleryProps {
-  images: ImageType[]
+  images: ImageType[];
+  category: string;
+  name: string
 }
-const Gallery: React.FC<GalleryProps> = ({images}) => {
+const Gallery: React.FC<GalleryProps> = ({images, name, category}) => {
   return (
       <Tab.Group as='div' className='flex flex-col-reverse'>
         <div className='mx-auto mt-6 w-full max-w-2xl sm:block lg:max-w-none'>
@@ -20,6 +22,7 @@ const Gallery: React.FC<GalleryProps> = ({images}) => {
             </Tab.List>
         </div>
         <Tab.Panels className='aspect-square w-full '>
+         <h2 className='text-xl my-3 mx-4 p-4 font-semibold'>{`${category} > ${name}`}</h2>
           {
            images.map((image) => (
           <Tab.Panel key={image.id}>

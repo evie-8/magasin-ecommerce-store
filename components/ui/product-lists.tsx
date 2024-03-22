@@ -39,7 +39,7 @@ const ProductLists: React.FC<ProductProps> = ({data, title, slider=false, pagina
     
       setCurrentPage(id);
       const productDiv = document.getElementById('pageContainer');
-      if (productDiv) {
+      if (productDiv && pagination) {
         productDiv.scrollIntoView({ behavior: 'smooth' });
       }
   }
@@ -100,29 +100,24 @@ if (slider) {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-          nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-         
+          
+        
         }
       },
       {
         breakpoint: 923,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-
+         
         }
       },
       {
         breakpoint: 620,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
-          nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-
+        
         }
       },
       {
@@ -130,8 +125,7 @@ if (slider) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+         
         }
       }
     ]

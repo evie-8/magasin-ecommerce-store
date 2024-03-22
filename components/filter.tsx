@@ -3,10 +3,11 @@
 import { Category, Color, Size } from "@/types";
 import { useSearchParams } from "next/navigation";
 import queryString from "query-string";
-import React from "react";
+import React, { useState } from "react";
 import Button  from "@/components/ui/newButton";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next-nprogress-bar";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface FilterProps {
     data: (Size | Color | Category)[];
@@ -22,6 +23,7 @@ const Filter: React.FC<FilterProps> = ({
     const router = useRouter();
     const selectedValue = searchParams.get(valueKey);
 
+    const [showFilters, setShowFilters] = useState(true);
     const onClick = (id: string) => {
         const current = queryString.parse(searchParams.toString());
             const query = {
@@ -40,12 +42,18 @@ const Filter: React.FC<FilterProps> = ({
             router.push(url);
     }
     return (
-        <div className="mb-8">
-            <h3 className="text-lg font-semibold">
+        <div className={`mb-8 `}>
+            <h3 className="flex gap-2 text-lg  font-semibold">
                 {name}
+                {
+                    showFilters ?
+                    <ChevronUp size={20} className="text-orange mt-1" onClick={() => setShowFilters((prev) => !prev)}/>
+                            :
+                    <ChevronDown size={20} className="text-orange mt-1" onClick={() => setShowFilters((prev) => !prev)}/>
+                }
             </h3>
             <hr className="my-4 border-light-grey"/>
-            <div className="flex flex-wrap gap-2">
+            <div className={`flex-wrap gap-2 ${showFilters ? 'flex' : 'hidden'}`}>
                 {data.map((filter)=> (
                     <div key={filter.id} className="flex items-center">
                         <Button

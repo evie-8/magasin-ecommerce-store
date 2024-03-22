@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,12 +12,43 @@
     @apply overflow-x-hidden scroll-smooth
   }
   body {
-    @apply font-spartan overflow-x-hidden scroll-smooth
+    @apply font-poppins overflow-x-hidden scroll-smooth
   }
 
   .active {
      @apply bg-orange text-white
   } 
+
+.navbar {
+  @apply flex justify-around p-4 sticky top-0 left-0 z-40
+}
+
+.nav-logo {
+  @apply flex items-center gap-3
+}
+
+.nav-logo p {
+  @apply text-black1 text-xl font-semibold
+}
+
+ .nav-menu {
+  @apply hidden lg:flex items-center list-none gap-6 text-gray text-xl font-medium  max-lg:absolute max-lg:top-24 max-lg:w-full max-lg:bg-white max-lg:p-4 max-lg:justify-center max-lg:shadow-md
+ }
+
+
+ .nav-menu li {
+  @apply flex flex-col items-center justify-center gap-1 cursor-pointer max-lg:gap-4 hover:text-orange
+ }
+
+ .nav-menu hr {
+  @apply border-none w-4/5 h-1 rounded-lg bg-orange
+ }
+  
+ .nav-login-cart {
+  @apply flex items-center gap-8
+ }
+
+
 
 .slide-item {
   @apply mx-2 my-0 md:basis-[45%] lg:basis-[23%] sm:basis-[80%] p-4

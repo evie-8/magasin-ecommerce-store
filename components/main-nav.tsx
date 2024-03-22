@@ -2,9 +2,10 @@
 
 import { cn } from '@/lib/utils';
 import { Category } from '@/types';
-import { Menu } from 'lucide-react';
+import { ChevronDownCircle, ChevronUpCircle, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
+import { useState } from 'react';
 
 interface MainNavProps {
     data: Category[]
@@ -12,6 +13,7 @@ interface MainNavProps {
 
 
 const MainNav: React.FC<MainNavProps> = ({data}) => {
+  const [showMenu, setShowMenu] = useState(false);
     const pathname = usePathname();
     const routes = data.map((route) => ({
         href: `/category/${route.id}`,
@@ -20,20 +22,40 @@ const MainNav: React.FC<MainNavProps> = ({data}) => {
         
     }))
 
+    const categoryToggle = () => {
+      setShowMenu((prev) => !prev);
+    };
+    
+
   return (
-    <nav className='relative mx-6 flex justify center items-center space-x-4 lg:space-x-6'>
+    <>
+     <p 
+      className='flex  p-4 text-orange gap-4 text-xl lg:hidden' onClick={categoryToggle}>
+        Categories 
+       {
+        !showMenu ?  <ChevronDownCircle size={24} className='mt-1'/>
+         :  <ChevronUpCircle size={24} className='mt-1'/>
+       }
+      </p>
+    <ul className={`nav-menu ${showMenu ? 'max-lg:flex': ''}`}>
      {
         routes.map((route) => (
-            <Link key={route.href} 
+          <li key={route.href} className=''>
+            <Link 
               href={route.href} 
-              className={cn('transition-colors hover:text-orange', route.active ? 'text-orange': 'text-grey]')}>
+              className=''>
                 {route.label}
             </Link>
+            {
+              route.active ? <hr/>  : ''
+            }
+            </li>
         ))
       }
       
      
-    </nav>
+    </ul>
+    </>
   )
 }
 
