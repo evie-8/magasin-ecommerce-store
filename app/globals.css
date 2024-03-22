@@ -32,7 +32,7 @@
 }
 
  .nav-menu {
-  @apply hidden lg:flex items-center list-none gap-6 text-gray text-xl max-lg:text-sm font-medium  max-lg:absolute max-lg:top-24 max-lg:w-full max-lg:bg-white max-lg:p-4 max-lg:justify-center max-lg:shadow-md
+  @apply hidden lg:flex items-center list-none gap-6 text-gray text-xl max-md:text-sm font-medium  max-lg:absolute max-lg:top-24 max-lg:w-full max-lg:bg-white max-lg:p-4 max-lg:justify-center max-lg:shadow-md
  }
 
 

@@ -7,6 +7,7 @@ import React from 'react';
 import MainNav from '@/components/main-nav';
 import getCategories from '@/actions/get-categories';
 import NavbarActions from '@/components/navbar-actions';
+import { FaShoppingBasket } from 'react-icons/fa';
 
 export const revalidate = 0;
 const NavBar =  async() => {
@@ -15,7 +16,8 @@ const NavBar =  async() => {
             <div className='relative  shadow-lg w-full'>
               <div className='navbar'>
               <Link href='/' className='nav-logo' >
-              <Image src={logo} width={150} height={150} alt='logo' className='max-lg:w-[65%]'/>
+                <p>SHOP</p>          
+                <FaShoppingBasket/>    
               </Link>
              
               <MainNav data={categories} />

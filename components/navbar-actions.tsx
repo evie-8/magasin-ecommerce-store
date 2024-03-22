@@ -27,7 +27,7 @@ const NavbarActions= ()=> {
         
          <Button onClick={() => router.push("/cart")}  className="flex items-center rounded-full bg-orange px-4 py-2">
                 <ShoppingBag
-                size={20}
+                size={15}
                 color="#fff"
                 />
                 <span className="ml-2 text-sm text-white font-medium">
