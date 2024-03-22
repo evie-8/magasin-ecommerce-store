@@ -16,6 +16,7 @@ const arrowStyles: CSSProperties = {
   background: "transparent",
   border: "none",
   padding: '20px',
+  margin: '0px'
 };
 
 const SampleNextArrow: React.FC<SampleArrowProps> = (props) => {
@@ -23,7 +24,7 @@ const SampleNextArrow: React.FC<SampleArrowProps> = (props) => {
   return (
     <div
       className={className}
-      style={{ ...style, ...arrowStyles, marginLeft: "10px" }}
+      style={{ ...style, ...arrowStyles }}
       onClick={onClick}
     >
       <FaChevronRight />
@@ -36,7 +37,7 @@ const SamplePrevArrow: React.FC<SampleArrowProps> = (props) => {
   return (
     <div
       className={className}
-      style={{ ...style, ...arrowStyles, marginRight: "10px" }}
+      style={{ ...style, ...arrowStyles}}
       onClick={onClick}
     >
       <FaChevronLeft />

@@ -30,7 +30,7 @@ const MainNav: React.FC<MainNavProps> = ({data}) => {
   return (
     <>
      <p 
-      className='flex  p-4 text-orange gap-4 text-xl lg:hidden' onClick={categoryToggle}>
+      className='flex  p-4 text-orange gap-4 text-xl max-lg:text-sm lg:hidden' onClick={categoryToggle}>
         Categories 
        {
         !showMenu ?  <ChevronDownCircle size={24} className='mt-1'/>
