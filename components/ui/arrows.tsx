@@ -15,7 +15,7 @@ const arrowStyles: CSSProperties = {
   cursor: "pointer",
   background: "transparent",
   border: "none",
-  padding: '30px',
+  padding: '25px',
   margin: '0px'
 };
 
