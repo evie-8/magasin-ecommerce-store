@@ -10,8 +10,8 @@ export const revalidate = 0;
 const HomePage = async () => {
  
   const products = await getProducts({isFeatured: true})
-  const newProducts = products.slice(0, 8);
-  const lastFourItems = products.slice(-8);
+  const newProducts = products.slice(0, 5);
+  const lastFourItems = products.slice(-5);
  
   return (
    <Container>
