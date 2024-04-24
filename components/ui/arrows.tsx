@@ -16,7 +16,8 @@ const arrowStyles: CSSProperties = {
   background: "transparent",
   border: "none",
   padding: '25px',
-  margin: '0px'
+  margin: '0px',
+  zIndex: '999',
 };
 
 const SampleNextArrow: React.FC<SampleArrowProps> = (props) => {
