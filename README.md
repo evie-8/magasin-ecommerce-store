@@ -1,4 +1,3 @@
-md
 # Magasin E-commerce Store
 
 E-commerce website built with Next.js, React, and TypeScript.
